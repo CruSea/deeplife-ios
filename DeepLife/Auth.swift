@@ -92,7 +92,10 @@ class Auth {
             
                 try realm.write {
                     
-                    realm.add(newUser, update: true)
+                    realm.add(newUser, update: .modified)
+                    
+                    //deprecated
+                    //realm.add(newUser, update: true)
                     
                 }
                 

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SettingsMenuView" customModule="DeepLife" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="394" height="150"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hno-iv-ig1">
+                    <rect key="frame" x="0.0" y="100" width="394" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="cf3-Ua-fCL"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="16"/>
+                    <state key="normal" title="Log Out">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="logOutButtonDidTouch:" destination="iN0-l3-epB" eventType="touchUpInside" id="vqc-VY-4Cl"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aBg-84-OCu">
+                    <rect key="frame" x="0.0" y="50" width="394" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="tiy-Rs-VMI"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="16"/>
+                    <state key="normal" title="Privacy Policy">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="privacyButtonDidTouch:" destination="iN0-l3-epB" eventType="touchUpInside" id="yjm-6H-QRS"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JRU-Ch-kAv">
+                    <rect key="frame" x="0.0" y="0.0" width="394" height="50"/>
+                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="16"/>
+                    <state key="normal" title="Terms">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="termsButtonDidTouch:" destination="iN0-l3-epB" eventType="touchUpInside" id="ccG-hO-3G6"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Hno-iv-ig1" secondAttribute="trailing" id="4tq-qT-SQD"/>
+                <constraint firstItem="JRU-Ch-kAv" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="6Y2-np-WDE"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Hno-iv-ig1" secondAttribute="bottom" id="821-RB-PdZ"/>
+                <constraint firstItem="Hno-iv-ig1" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="KhP-RM-1HW"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="JRU-Ch-kAv" secondAttribute="trailing" id="Lir-lF-U0H"/>
+                <constraint firstItem="JRU-Ch-kAv" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="MBm-NM-XPc"/>
+                <constraint firstItem="aBg-84-OCu" firstAttribute="top" secondItem="JRU-Ch-kAv" secondAttribute="bottom" id="fW9-Y9-DHc"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="aBg-84-OCu" secondAttribute="trailing" id="lgq-Xh-D07"/>
+                <constraint firstItem="Hno-iv-ig1" firstAttribute="top" secondItem="aBg-84-OCu" secondAttribute="bottom" id="qXR-te-Tdr"/>
+                <constraint firstItem="aBg-84-OCu" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="zz5-l6-ywf"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="logOutButton" destination="Hno-iv-ig1" id="Jp7-cq-cLD"/>
+                <outlet property="privacyButton" destination="aBg-84-OCu" id="3EF-WA-XrZ"/>
+                <outlet property="termsButton" destination="JRU-Ch-kAv" id="LGA-Ep-yGh"/>
+            </connections>
+            <point key="canvasLocation" x="68.799999999999997" y="-188.90554722638683"/>
+        </view>
+    </objects>
+</document>

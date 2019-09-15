@@ -51,9 +51,19 @@
 		E17263E8232B9B3A00E915A3 /* FeedTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17263E6232B9B3A00E915A3 /* FeedTextTableViewCell.swift */; };
 		E17263E9232B9B3A00E915A3 /* FeedTextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E17263E7232B9B3A00E915A3 /* FeedTextTableViewCell.xib */; };
 		E17BCC2321980FA100EBE5E3 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17BCC2221980FA100EBE5E3 /* Validation.swift */; };
+		E1A304F9232E346D00E1A1F0 /* NewPost.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1A304F8232E346D00E1A1F0 /* NewPost.storyboard */; };
+		E1A304FB232E38E600E1A1F0 /* NewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A304FA232E38E600E1A1F0 /* NewPostViewController.swift */; };
+		E1A304FD232E396000E1A1F0 /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A304FC232E396000E1A1F0 /* CreatePostViewController.swift */; };
+		E1A304FF232E3A2200E1A1F0 /* PhotoLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A304FE232E3A2200E1A1F0 /* PhotoLibraryViewController.swift */; };
+		E1A30501232E67F200E1A1F0 /* NewPostPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A30500232E67F200E1A1F0 /* NewPostPageViewController.swift */; };
+		E1A30503232E69D500E1A1F0 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A30502232E69D500E1A1F0 /* PhotoCollectionViewCell.swift */; };
 		E1B35613232D797200F6877B /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B35611232D797200F6877B /* CommentTableViewCell.swift */; };
 		E1B35616232D7B6B00F6877B /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B35615232D7B6B00F6877B /* CommentsViewController.swift */; };
 		E1B35618232D7EFC00F6877B /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B35617232D7EFC00F6877B /* Comment.swift */; };
+		E1C764F3232E6DF3005632A2 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C764F2232E6DF3005632A2 /* CameraViewController.swift */; };
+		E1C764F8232E6EBB005632A2 /* SimpleCameraProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C764F5232E6EBB005632A2 /* SimpleCameraProtocol.swift */; };
+		E1C764F9232E6EBB005632A2 /* SimpleCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C764F6232E6EBB005632A2 /* SimpleCamera.swift */; };
+		E1C764FA232E6EBB005632A2 /* SimpleCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C764F7232E6EBB005632A2 /* SimpleCameraView.swift */; };
 		E1CCEF24217659DB00B1498D /* DiscipleBarGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CCEF23217659DB00B1498D /* DiscipleBarGraph.swift */; };
 		E1CF4EA3216FF46C00B8736E /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E1CF4EA0216FF46400B8736E /* Roboto-Black.ttf */; };
 		E1CF4EA4216FF47100B8736E /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E1CF4EA1216FF46400B8736E /* Roboto-BlackItalic.ttf */; };
@@ -137,9 +147,19 @@
 		E17263E6232B9B3A00E915A3 /* FeedTextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTextTableViewCell.swift; sourceTree = "<group>"; };
 		E17263E7232B9B3A00E915A3 /* FeedTextTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedTextTableViewCell.xib; sourceTree = "<group>"; };
 		E17BCC2221980FA100EBE5E3 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		E1A304F8232E346D00E1A1F0 /* NewPost.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewPost.storyboard; sourceTree = "<group>"; };
+		E1A304FA232E38E600E1A1F0 /* NewPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewController.swift; sourceTree = "<group>"; };
+		E1A304FC232E396000E1A1F0 /* CreatePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
+		E1A304FE232E3A2200E1A1F0 /* PhotoLibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibraryViewController.swift; sourceTree = "<group>"; };
+		E1A30500232E67F200E1A1F0 /* NewPostPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostPageViewController.swift; sourceTree = "<group>"; };
+		E1A30502232E69D500E1A1F0 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		E1B35611232D797200F6877B /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		E1B35615232D7B6B00F6877B /* CommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
 		E1B35617232D7EFC00F6877B /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		E1C764F2232E6DF3005632A2 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		E1C764F5232E6EBB005632A2 /* SimpleCameraProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleCameraProtocol.swift; sourceTree = "<group>"; };
+		E1C764F6232E6EBB005632A2 /* SimpleCamera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleCamera.swift; sourceTree = "<group>"; };
+		E1C764F7232E6EBB005632A2 /* SimpleCameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleCameraView.swift; sourceTree = "<group>"; };
 		E1CCEF23217659DB00B1498D /* DiscipleBarGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscipleBarGraph.swift; sourceTree = "<group>"; };
 		E1CF4E97216FF45700B8736E /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
 		E1CF4E98216FF45700B8736E /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
@@ -246,6 +266,11 @@
 				E1F44ED1232D366400798FD7 /* EventsViewController.swift */,
 				E1F44ED5232D36BD00798FD7 /* ProfileViewController.swift */,
 				E1B35615232D7B6B00F6877B /* CommentsViewController.swift */,
+				E1A304FA232E38E600E1A1F0 /* NewPostViewController.swift */,
+				E1A304FC232E396000E1A1F0 /* CreatePostViewController.swift */,
+				E1A304FE232E3A2200E1A1F0 /* PhotoLibraryViewController.swift */,
+				E1A30500232E67F200E1A1F0 /* NewPostPageViewController.swift */,
+				E1C764F2232E6DF3005632A2 /* CameraViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -262,6 +287,7 @@
 				E1F44ECB232D35F400798FD7 /* Groups.storyboard */,
 				E1F44ECF232D365300798FD7 /* Events.storyboard */,
 				E1F44ED3232D36A400798FD7 /* Profile.storyboard */,
+				E1A304F8232E346D00E1A1F0 /* NewPost.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -283,8 +309,19 @@
 				E17263E6232B9B3A00E915A3 /* FeedTextTableViewCell.swift */,
 				E17263E7232B9B3A00E915A3 /* FeedTextTableViewCell.xib */,
 				E1B35611232D797200F6877B /* CommentTableViewCell.swift */,
+				E1A30502232E69D500E1A1F0 /* PhotoCollectionViewCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		E1C764F4232E6EAC005632A2 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				E1C764F6232E6EBB005632A2 /* SimpleCamera.swift */,
+				E1C764F5232E6EBB005632A2 /* SimpleCameraProtocol.swift */,
+				E1C764F7232E6EBB005632A2 /* SimpleCameraView.swift */,
+			);
+			path = Camera;
 			sourceTree = "<group>";
 		};
 		E1CF4E95216FF40900B8736E /* Resources */ = {
@@ -347,6 +384,7 @@
 				E14217B8219C96FA00FF6C77 /* DeepStage.swift */,
 				E123B55B21A33ED800D3EFC7 /* TreeView.swift */,
 				E15687F5219DD88F00C02884 /* InternetCheck.swift */,
+				E1C764F4232E6EAC005632A2 /* Camera */,
 				E10A8F532178C47D0005AED0 /* Models */,
 				E1B292D421738F2C008380A4 /* Views */,
 				E127F2C12170EC5600BF43F3 /* Storyboards */,
@@ -449,6 +487,7 @@
 				E1CF4EAC216FF47100B8736E /* Roboto-Regular.ttf in Resources */,
 				E1CF4EA3216FF46C00B8736E /* Roboto-Black.ttf in Resources */,
 				E1CF4EA8216FF47100B8736E /* Roboto-Light.ttf in Resources */,
+				E1A304F9232E346D00E1A1F0 /* NewPost.storyboard in Resources */,
 				E127F2BD2170E81E00BF43F3 /* Colors.xcassets in Resources */,
 				E1F44ECC232D35F400798FD7 /* Groups.storyboard in Resources */,
 				E13DF026217F625900153B80 /* click_08.wav in Resources */,
@@ -508,12 +547,14 @@
 				E1FC48DB2167B4DE0087C251 /* LoginViewController.swift in Sources */,
 				E1143D39217D298D008B553D /* DisciplesMockData.swift in Sources */,
 				E1143D49217D46E9008B553D /* AddTaskViewController.swift in Sources */,
+				E1C764FA232E6EBB005632A2 /* SimpleCameraView.swift in Sources */,
 				E14F67CC217CE39D0088A70F /* AddUnderDataSource.swift in Sources */,
 				E1F44ECA232D1D4F00798FD7 /* Post.swift in Sources */,
 				E13249D8217E48E0001F248B /* NewExposureViewController.swift in Sources */,
 				E1CCEF24217659DB00B1498D /* DiscipleBarGraph.swift in Sources */,
 				E127F2CF2170ED3A00BF43F3 /* TreeViewController.swift in Sources */,
 				E1E012B321A4B0A2001EEF2D /* SignupViewController.swift in Sources */,
+				E1C764F3232E6DF3005632A2 /* CameraViewController.swift in Sources */,
 				E17263E8232B9B3A00E915A3 /* FeedTextTableViewCell.swift in Sources */,
 				E14217B9219C96FA00FF6C77 /* DeepStage.swift in Sources */,
 				E1143D3E217D3509008B553D /* TasksTableViewCell.swift in Sources */,
@@ -523,6 +564,7 @@
 				E1143D45217D4116008B553D /* TaskDetailsViewController.swift in Sources */,
 				E127F2BB2170E39B00BF43F3 /* Extensions.swift in Sources */,
 				E13DF024217F5D5200153B80 /* SettingsMenuView.swift in Sources */,
+				E1A30501232E67F200E1A1F0 /* NewPostPageViewController.swift in Sources */,
 				E15687F4219DCD2100C02884 /* GroupingDataSource.swift in Sources */,
 				E127F2CB2170ECF700BF43F3 /* ExposureViewController.swift in Sources */,
 				E1143D37217D21DB008B553D /* DiscipleProfileViewController.swift in Sources */,
@@ -541,12 +583,18 @@
 				E1E87A96217A7F7E00C21FAF /* DisciplesTableViewCell.swift in Sources */,
 				E107D4B62194981800368FC4 /* APIRouter.swift in Sources */,
 				E10A8F552178C48F0005AED0 /* User.swift in Sources */,
+				E1A304FF232E3A2200E1A1F0 /* PhotoLibraryViewController.swift in Sources */,
 				E127F2C72170ECBD00BF43F3 /* TasksViewController.swift in Sources */,
+				E1A30503232E69D500E1A1F0 /* PhotoCollectionViewCell.swift in Sources */,
+				E1C764F9232E6EBB005632A2 /* SimpleCamera.swift in Sources */,
+				E1A304FB232E38E600E1A1F0 /* NewPostViewController.swift in Sources */,
+				E1A304FD232E396000E1A1F0 /* CreatePostViewController.swift in Sources */,
 				E16E3F9C21739AD100CB2607 /* NewDiscipleViewController.swift in Sources */,
 				E1F44ED6232D36BD00798FD7 /* ProfileViewController.swift in Sources */,
 				E127F2D12170F33A00BF43F3 /* Auth.swift in Sources */,
 				E1F733532178FA0300465A32 /* DisciplesViewController.swift in Sources */,
 				E15687F6219DD88F00C02884 /* InternetCheck.swift in Sources */,
+				E1C764F8232E6EBB005632A2 /* SimpleCameraProtocol.swift in Sources */,
 				E1CF506C219EC90E00251787 /* TabBarDelegate.swift in Sources */,
 				E1B35616232D7B6B00F6877B /* CommentsViewController.swift in Sources */,
 				E149D2612194D8BE009792A5 /* Countries.swift in Sources */,

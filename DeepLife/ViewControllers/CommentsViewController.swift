@@ -38,6 +38,7 @@ class CommentsViewController: UIViewController {
         tableView.separatorStyle = .none
         tableView.addSubview(self.refreshControl)
         title = "Comments"
+        registerForKeyboardNotifications()
         fetchComments()
     }
     

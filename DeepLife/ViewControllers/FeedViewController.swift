@@ -132,7 +132,10 @@ class FeedViewController: UIViewController {
     }
     
     @objc func newPostButtonDidTouch() {
-        
+        let newPostStoryboard = UIStoryboard(name: "NewPost", bundle: nil)
+        let newPostVC = newPostStoryboard.instantiateViewController(withIdentifier: "NewPost") as! NewPostViewController
+        let navController = UINavigationController(rootViewController: newPostVC)
+        self.present(navController, animated: true, completion: nil)
     }
 
 }

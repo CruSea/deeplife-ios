@@ -12,6 +12,18 @@ class APIRoute {
     
     let API_BASE_URL: String = "https://deeplife.africa/api/phone/gn_api"
     
+    func getGroupPostsURL() -> String {
+        
+        return "\(API_BASE_URL)/group_posts.php"
+        
+    }
+    
+    func getGroupsURL() -> String {
+        
+        return "\(API_BASE_URL)/get_groups.php"
+        
+    }
+    
     func createUploadURL() -> String {
         
         return "\(API_BASE_URL)/upload_image.php"

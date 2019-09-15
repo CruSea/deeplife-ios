@@ -64,6 +64,11 @@
 		E1C764F8232E6EBB005632A2 /* SimpleCameraProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C764F5232E6EBB005632A2 /* SimpleCameraProtocol.swift */; };
 		E1C764F9232E6EBB005632A2 /* SimpleCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C764F6232E6EBB005632A2 /* SimpleCamera.swift */; };
 		E1C764FA232E6EBB005632A2 /* SimpleCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C764F7232E6EBB005632A2 /* SimpleCameraView.swift */; };
+		E1C764FC232EB68E005632A2 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C764FB232EB68E005632A2 /* Group.swift */; };
+		E1C764FF232EB7F4005632A2 /* GroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C764FD232EB7F4005632A2 /* GroupTableViewCell.swift */; };
+		E1C76500232EB7F4005632A2 /* GroupTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1C764FE232EB7F4005632A2 /* GroupTableViewCell.xib */; };
+		E1C76502232ED9F2005632A2 /* GroupDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C76501232ED9F2005632A2 /* GroupDetailViewController.swift */; };
+		E1C76504232EDC6E005632A2 /* GroupChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C76503232EDC6E005632A2 /* GroupChatViewController.swift */; };
 		E1CCEF24217659DB00B1498D /* DiscipleBarGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CCEF23217659DB00B1498D /* DiscipleBarGraph.swift */; };
 		E1CF4EA3216FF46C00B8736E /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E1CF4EA0216FF46400B8736E /* Roboto-Black.ttf */; };
 		E1CF4EA4216FF47100B8736E /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E1CF4EA1216FF46400B8736E /* Roboto-BlackItalic.ttf */; };
@@ -160,6 +165,11 @@
 		E1C764F5232E6EBB005632A2 /* SimpleCameraProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleCameraProtocol.swift; sourceTree = "<group>"; };
 		E1C764F6232E6EBB005632A2 /* SimpleCamera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleCamera.swift; sourceTree = "<group>"; };
 		E1C764F7232E6EBB005632A2 /* SimpleCameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleCameraView.swift; sourceTree = "<group>"; };
+		E1C764FB232EB68E005632A2 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		E1C764FD232EB7F4005632A2 /* GroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTableViewCell.swift; sourceTree = "<group>"; };
+		E1C764FE232EB7F4005632A2 /* GroupTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroupTableViewCell.xib; sourceTree = "<group>"; };
+		E1C76501232ED9F2005632A2 /* GroupDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupDetailViewController.swift; sourceTree = "<group>"; };
+		E1C76503232EDC6E005632A2 /* GroupChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupChatViewController.swift; sourceTree = "<group>"; };
 		E1CCEF23217659DB00B1498D /* DiscipleBarGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscipleBarGraph.swift; sourceTree = "<group>"; };
 		E1CF4E97216FF45700B8736E /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
 		E1CF4E98216FF45700B8736E /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
@@ -242,6 +252,7 @@
 				E15687F3219DCD2100C02884 /* GroupingDataSource.swift */,
 				E1F44EC9232D1D4F00798FD7 /* Post.swift */,
 				E1B35617232D7EFC00F6877B /* Comment.swift */,
+				E1C764FB232EB68E005632A2 /* Group.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -271,6 +282,8 @@
 				E1A304FE232E3A2200E1A1F0 /* PhotoLibraryViewController.swift */,
 				E1A30500232E67F200E1A1F0 /* NewPostPageViewController.swift */,
 				E1C764F2232E6DF3005632A2 /* CameraViewController.swift */,
+				E1C76501232ED9F2005632A2 /* GroupDetailViewController.swift */,
+				E1C76503232EDC6E005632A2 /* GroupChatViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -310,6 +323,8 @@
 				E17263E7232B9B3A00E915A3 /* FeedTextTableViewCell.xib */,
 				E1B35611232D797200F6877B /* CommentTableViewCell.swift */,
 				E1A30502232E69D500E1A1F0 /* PhotoCollectionViewCell.swift */,
+				E1C764FD232EB7F4005632A2 /* GroupTableViewCell.swift */,
+				E1C764FE232EB7F4005632A2 /* GroupTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -481,6 +496,7 @@
 				E17263DF232B987C00E915A3 /* Feed.storyboard in Resources */,
 				E1CF4EA7216FF47100B8736E /* Roboto-Italic.ttf in Resources */,
 				E1CF4EA6216FF47100B8736E /* Roboto-BoldItalic.ttf in Resources */,
+				E1C76500232EB7F4005632A2 /* GroupTableViewCell.xib in Resources */,
 				E1CF4EAA216FF47100B8736E /* Roboto-Medium.ttf in Resources */,
 				E17263E5232B9B2A00E915A3 /* FeedImageTableViewCell.xib in Resources */,
 				E13DF022217F5D3C00153B80 /* SettingsMenuView.xib in Resources */,
@@ -556,6 +572,7 @@
 				E1E012B321A4B0A2001EEF2D /* SignupViewController.swift in Sources */,
 				E1C764F3232E6DF3005632A2 /* CameraViewController.swift in Sources */,
 				E17263E8232B9B3A00E915A3 /* FeedTextTableViewCell.swift in Sources */,
+				E1C76502232ED9F2005632A2 /* GroupDetailViewController.swift in Sources */,
 				E14217B9219C96FA00FF6C77 /* DeepStage.swift in Sources */,
 				E1143D3E217D3509008B553D /* TasksTableViewCell.swift in Sources */,
 				E127F2BF2170E92B00BF43F3 /* Colors.swift in Sources */,
@@ -570,6 +587,7 @@
 				E1143D37217D21DB008B553D /* DiscipleProfileViewController.swift in Sources */,
 				E13249DA217E4B99001F248B /* ExposureDataSource.swift in Sources */,
 				E1B35618232D7EFC00F6877B /* Comment.swift in Sources */,
+				E1C764FC232EB68E005632A2 /* Group.swift in Sources */,
 				E1FC48D92167B4DE0087C251 /* AppDelegate.swift in Sources */,
 				E17263E1232B992700E915A3 /* FeedViewController.swift in Sources */,
 				E149D2632194E79F009792A5 /* ExposureTypes.swift in Sources */,
@@ -580,6 +598,7 @@
 				E15687F2219DCA3900C02884 /* GenderDataSource.swift in Sources */,
 				E17BCC2321980FA100EBE5E3 /* Validation.swift in Sources */,
 				E1B35613232D797200F6877B /* CommentTableViewCell.swift in Sources */,
+				E1C764FF232EB7F4005632A2 /* GroupTableViewCell.swift in Sources */,
 				E1E87A96217A7F7E00C21FAF /* DisciplesTableViewCell.swift in Sources */,
 				E107D4B62194981800368FC4 /* APIRouter.swift in Sources */,
 				E10A8F552178C48F0005AED0 /* User.swift in Sources */,
@@ -595,6 +614,7 @@
 				E1F733532178FA0300465A32 /* DisciplesViewController.swift in Sources */,
 				E15687F6219DD88F00C02884 /* InternetCheck.swift in Sources */,
 				E1C764F8232E6EBB005632A2 /* SimpleCameraProtocol.swift in Sources */,
+				E1C76504232EDC6E005632A2 /* GroupChatViewController.swift in Sources */,
 				E1CF506C219EC90E00251787 /* TabBarDelegate.swift in Sources */,
 				E1B35616232D7B6B00F6877B /* CommentsViewController.swift in Sources */,
 				E149D2612194D8BE009792A5 /* Countries.swift in Sources */,

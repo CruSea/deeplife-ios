@@ -1,8 +1,8 @@
 //
-//  FeedViewController.swift
+//  GroupChatViewController.swift
 //  DeepLife
 //
-//  Created by Gwinyai on 13/9/2019.
+//  Created by Gwinyai on 15/9/2019.
 //  Copyright © 2019 Gwinyai Nyatsoka. All rights reserved.
 //
 
@@ -10,18 +10,14 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-protocol FeedDelegate: class {
-    func likeButtonDidTouch(postId: String)
-    func commentsButtonDidTouch(postId: String)
-}
-
-class FeedViewController: UIViewController {
+class GroupChatViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    var groupId: String?
     
     lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
-        refreshControl.addTarget(self, action: #selector(FeedViewController.handleRefresh(_:)), for: UIControl.Event.valueChanged)
+        refreshControl.addTarget(self, action: #selector(GroupChatViewController.handleRefresh(_:)), for: UIControl.Event.valueChanged)
         refreshControl.tintColor = UIColor.red
         return refreshControl
         
@@ -39,19 +35,8 @@ class FeedViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.tableFooterView = UIView()
-        var leftBarItemImage = UIImage(named: "camera_nav_icon")
-        leftBarItemImage = leftBarItemImage?.withRenderingMode(.alwaysOriginal)
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: leftBarItemImage, style: .plain, target: self, action: #selector(newPostButtonDidTouch))
-        title = "Feed"
+        title = "Group Chat"
         getPosts()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        if shouldRefresh {
-            shouldRefresh = false
-            getPosts()
-        }
     }
     
     @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
@@ -59,23 +44,18 @@ class FeedViewController: UIViewController {
     }
     
     func getPosts() {
-        guard let currentUserId = Auth.auth.currentUserId else {
-            if refreshControl.isRefreshing {
-                refreshControl.endRefreshing()
-            }
-            return
-        }
+        
+        guard let groupId = self.groupId else { return }
         
         if !refreshControl.isRefreshing {
             refreshControl.beginRefreshing()
         }
-        let userDataParameters: Parameters = [
-            "user_id" : currentUserId
-        ]
+        
         let headers: HTTPHeaders = [
             "Accept": "application/json; charset=utf-8"
         ]
-        Alamofire.request(APIRoute.shared.getFeedURL(), method: .post, parameters: userDataParameters, encoding: URLEncoding.default, headers: headers).responseJSON { [weak self] (data) in
+        
+        Alamofire.request(APIRoute.shared.getGroupPostsURL() + "?group_id=" + groupId, method: .get, parameters: nil, encoding: URLEncoding.default, headers: headers).responseJSON { [weak self] (data) in
             guard let strongSelf = self else { return }
             if strongSelf.refreshControl.isRefreshing {
                 DispatchQueue.main.async {
@@ -89,7 +69,7 @@ class FeedViewController: UIViewController {
             }
             if let _data = data.result.value {
                 let jsonData = JSON(_data)
-                if let postList = jsonData["data"].arrayObject {
+                if let postList = jsonData["user_group"].arrayObject {
                     strongSelf.posts = [Post]()
                     for postItem in postList {
                         guard let post = postItem as? [String: Any] else {
@@ -110,7 +90,7 @@ class FeedViewController: UIViewController {
                         let commentCount: Int = Int(post["comments_count"] as? String ?? "0")!
                         let likesCount: Int = Int(post["like_count"] as? String ?? "0")!
                         let createdDate: String = post["registered"] as? String ?? ""
-                        let authorId: String = currentUserId
+                        let authorId: String = ""
                         let isLiked: Bool = post["is_liked"] as? Bool ?? false
                         
                         let newPost = Post(postId: postId,
@@ -138,28 +118,17 @@ class FeedViewController: UIViewController {
                 print("could not get data")
             }
         }
-        
-    }
-    
-    @objc func newPostButtonDidTouch() {
-        let newPostStoryboard = UIStoryboard(name: "NewPost", bundle: nil)
-        let newPostVC = newPostStoryboard.instantiateViewController(withIdentifier: "NewPost") as! NewPostViewController
-        let navController = UINavigationController(rootViewController: newPostVC)
-        self.shouldRefresh = true
-        self.present(navController, animated: true, completion: nil)
-    }
-
-}
-
-extension FeedViewController: UITableViewDelegate {
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
     }
     
 }
 
-extension FeedViewController: UITableViewDataSource {
+extension GroupChatViewController: UITableViewDelegate {
+    
+    
+    
+}
+
+extension GroupChatViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return posts.count
@@ -213,7 +182,7 @@ extension FeedViewController: UITableViewDataSource {
     
 }
 
-extension FeedViewController: FeedDelegate {
+extension GroupChatViewController: FeedDelegate {
     
     func commentsButtonDidTouch(postId: String) {
         let feedStoryboard = UIStoryboard(name: "Feed", bundle: nil)
@@ -226,9 +195,9 @@ extension FeedViewController: FeedDelegate {
         guard let currentUserId = Auth.auth.currentUserId else {
             return
         }
-//        let userDataParameters: Parameters = [
-//            "user_id" : currentUserId
-//        ]
+        //        let userDataParameters: Parameters = [
+        //            "user_id" : currentUserId
+        //        ]
         let headers: HTTPHeaders = [
             "Accept": "application/json; charset=utf-8"
         ]
@@ -240,4 +209,5 @@ extension FeedViewController: FeedDelegate {
             }
         }
     }
+    
 }

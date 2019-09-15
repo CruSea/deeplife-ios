@@ -17,13 +17,59 @@
                     <view key="view" contentMode="scaleToFill" id="Ajp-FY-7jT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="V6d-pD-V1l">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="V6d-pD-V1l" firstAttribute="trailing" secondItem="8OJ-is-Jf2" secondAttribute="trailing" id="1lk-43-8OD"/>
+                            <constraint firstItem="V6d-pD-V1l" firstAttribute="bottom" secondItem="8OJ-is-Jf2" secondAttribute="bottom" id="9Xj-rW-r9W"/>
+                            <constraint firstItem="V6d-pD-V1l" firstAttribute="top" secondItem="Ajp-FY-7jT" secondAttribute="top" id="t7q-OU-ouV"/>
+                            <constraint firstItem="V6d-pD-V1l" firstAttribute="leading" secondItem="8OJ-is-Jf2" secondAttribute="leading" id="vUg-Ma-b4f"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="8OJ-is-Jf2"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="V6d-pD-V1l" id="KQ5-gB-Ige"/>
+                        <segue destination="SSP-4E-JUa" kind="show" identifier="GroupDetailSegue" id="Ye8-Ne-LMI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H3j-UP-jUX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-45" y="22"/>
+            <point key="canvasLocation" x="-46.376811594202906" y="21.195652173913047"/>
+        </scene>
+        <!--Group Chat View Controller-->
+        <scene sceneID="t8F-wX-Sa8">
+            <objects>
+                <viewController id="SSP-4E-JUa" customClass="GroupChatViewController" customModule="DeepLife" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zlx-NQ-zei">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="E32-IJ-5Sd">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="E32-IJ-5Sd" firstAttribute="trailing" secondItem="vfk-qb-NSJ" secondAttribute="trailing" id="0ug-yr-bUj"/>
+                            <constraint firstItem="E32-IJ-5Sd" firstAttribute="bottom" secondItem="vfk-qb-NSJ" secondAttribute="bottom" id="5jy-V7-TN3"/>
+                            <constraint firstItem="E32-IJ-5Sd" firstAttribute="leading" secondItem="vfk-qb-NSJ" secondAttribute="leading" id="J6X-dL-4eM"/>
+                            <constraint firstItem="E32-IJ-5Sd" firstAttribute="top" secondItem="Zlx-NQ-zei" secondAttribute="top" id="OMp-2C-v3r"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vfk-qb-NSJ"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="E32-IJ-5Sd" id="2aN-16-Y4w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8qJ-7Y-ZM4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="782.60869565217399" y="21.195652173913047"/>
         </scene>
     </scenes>
 </document>

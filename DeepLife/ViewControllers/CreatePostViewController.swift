@@ -116,12 +116,6 @@ class CreatePostViewController: UIViewController {
         
     }
     
-    func uploadImage(data: Data, caption: String) {
-        
-        
-        
-    }
-    
     @objc func cancelUpload() {
         
         progressIndicator.isHidden = true

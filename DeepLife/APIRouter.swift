@@ -12,6 +12,30 @@ class APIRoute {
     
     let API_BASE_URL: String = "https://deeplife.africa/api/phone/gn_api"
     
+    func getCreateCommentURL() -> String {
+        
+        return "\(API_BASE_URL)/create_comment.php"
+        
+    }
+    
+    func getCommentsURL() -> String {
+        
+        return "\(API_BASE_URL)/get_comments.php"
+        
+    }
+    
+    func getFeedURL() -> String {
+        
+        return "\(API_BASE_URL)/get_posts.php"
+        
+    }
+    
+    func getLikeURL() -> String {
+        
+        return "\(API_BASE_URL)/like_post.php"
+        
+    }
+    
     func getTaskListURL() -> String {
         
         return "\(API_BASE_URL)/get_task_list.php"

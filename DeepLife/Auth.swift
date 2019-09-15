@@ -113,6 +113,180 @@ class Auth {
         
         currentSessionId = sessionId
         
+//        let tabController = UITabBarController()
+//
+//        let homeStoryboard = UIStoryboard(name: "Home", bundle: nil)
+//
+//        let tasksStoryboard = UIStoryboard(name: "Tasks", bundle: nil)
+//
+//        let exposureStoryboard = UIStoryboard(name: "Exposure", bundle: nil)
+//
+//        let treeStoryboard = UIStoryboard(name: "Tree", bundle: nil)
+//
+//        let homeVC = homeStoryboard.instantiateViewController(withIdentifier: "homeVC") as! HomeViewController
+//
+//        let tasksVC = tasksStoryboard.instantiateViewController(withIdentifier: "tasksVC") as! TasksViewController
+//
+//        let exposureVC = exposureStoryboard.instantiateViewController(withIdentifier: "exposureVC") as! ExposureViewController
+//
+//        let treeVC = treeStoryboard.instantiateViewController(withIdentifier: "treeVC") as! TreeViewController
+//
+//
+//        let vcData: [(UIViewController, UIImage, String)] = [
+//            (homeVC, UIImage(named: "home_icon")!, "home"),
+//            (tasksVC, UIImage(named: "tasks_icon")!, "tasks"),
+//            (exposureVC, UIImage(named: "exposure_icon")!, "exposure"),
+//            (treeVC, UIImage(named: "tree_icon")!, "tree")
+//        ]
+//
+//        UINavigationBar.appearance().tintColor = UIColor.black
+//
+//        UINavigationBar.appearance().largeTitleTextAttributes =
+//            [NSAttributedString.Key.foregroundColor:UIColor.black,
+//             NSAttributedString.Key.font: UIFont(name: "Roboto-Bold", size: 30)!]
+//
+//        let vcs = vcData.map { (vc, image, title) -> UIViewController in
+//
+//            if title == "tasks" || title == "exposure" || title == "tree" {
+//
+//                let nav = UINavigationController(rootViewController: vc)
+//
+//                nav.tabBarItem.image = image
+//
+//                nav.navigationBar.prefersLargeTitles = true
+//
+//                nav.navigationItem.largeTitleDisplayMode = .never
+//
+//                nav.title = ""
+//
+//                return nav
+//
+//            }
+//
+//            vc.tabBarItem.image = image
+//
+//            vc.title = ""
+//
+//            return vc
+//
+//        }
+//
+//        tabController.viewControllers = vcs
+//
+//        tabController.tabBar.barTintColor = UIColor(hexString: "#FFFFFF")
+//
+//        tabController.tabBar.tintColor = UIColor(hexString: "#000000")
+//
+//        tabController.tabBar.isTranslucent = false
+//
+//        //tabController.delegate = tabBarDelegate
+//
+//        if let items = tabController.tabBar.items {
+//
+//            for item in items {
+//
+//                if let image = item.image {
+//
+//                    item.image = image.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
+//
+//                    item.title = ""
+//
+//                    item.imageInsets = UIEdgeInsets(top: 6, left: 0, bottom: -6, right: 0)
+//                }
+//
+//            }
+//
+//        }
+        
+        let tabController = getSocialWindowRoot()
+        
+        return tabController
+        
+    }
+    
+    func getSocialWindowRoot() -> UITabBarController {
+        
+        let tabController = UITabBarController()
+        
+        let feedStoryboard = UIStoryboard(name: "Feed", bundle: nil)
+        
+        let groupsStoryboard = UIStoryboard(name: "Groups", bundle: nil)
+        
+        let eventsStoryboard = UIStoryboard(name: "Events", bundle: nil)
+        
+        let profileStoryboard = UIStoryboard(name: "Profile", bundle: nil)
+        
+        let feedVC = feedStoryboard.instantiateViewController(withIdentifier: "feedVC") as! FeedViewController
+        
+        let groupsVC = groupsStoryboard.instantiateViewController(withIdentifier: "groupsVC") as! GroupsViewController
+        
+        let eventsVC = eventsStoryboard.instantiateViewController(withIdentifier: "eventsVC") as! EventsViewController
+        
+        let profileVC = profileStoryboard.instantiateViewController(withIdentifier: "profileVC") as! ProfileViewController
+        
+        
+        let vcData: [(UIViewController, UIImage, String)] = [
+            (feedVC, UIImage(named: "home_icon")!, "Feed"),
+            (groupsVC, UIImage(named: "tasks_icon")!, "Groups"),
+            (eventsVC, UIImage(named: "exposure_icon")!, "Events"),
+            (profileVC, UIImage(named: "tree_icon")!, "Profile")
+        ]
+        
+        UINavigationBar.appearance().tintColor = UIColor.black
+        
+        UINavigationBar.appearance().largeTitleTextAttributes =
+            [NSAttributedString.Key.foregroundColor:UIColor.black,
+             NSAttributedString.Key.font: UIFont(name: "Roboto-Bold", size: 30)!]
+        
+        let vcs = vcData.map { (vc, image, title) -> UIViewController in
+            
+            let nav = UINavigationController(rootViewController: vc)
+            
+            nav.tabBarItem.image = image
+            
+            nav.navigationBar.prefersLargeTitles = true
+            
+            //nav.navigationItem.largeTitleDisplayMode = .never
+            
+            nav.title = title
+            
+            return nav
+            
+        }
+        
+        tabController.viewControllers = vcs
+        
+        tabController.tabBar.barTintColor = UIColor(hexString: "#FFFFFF")
+        
+        tabController.tabBar.tintColor = UIColor(hexString: "#000000")
+        
+        tabController.tabBar.isTranslucent = false
+        
+        tabBarHeight = tabController.tabBar.frame.size.height
+        
+        if let items = tabController.tabBar.items {
+            
+            for item in items {
+                
+                if let image = item.image {
+                    
+                    item.image = image.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
+                    
+                    item.title = ""
+                    
+                    item.imageInsets = UIEdgeInsets(top: 6, left: 0, bottom: -6, right: 0)
+                }
+                
+            }
+            
+        }
+        
+        return tabController
+        
+    }
+    
+    func getDashboardWindowRoot() -> UITabBarController {
+        
         let tabController = UITabBarController()
         
         let homeStoryboard = UIStoryboard(name: "Home", bundle: nil)
@@ -178,6 +352,8 @@ class Auth {
         tabController.tabBar.tintColor = UIColor(hexString: "#000000")
         
         tabController.tabBar.isTranslucent = false
+        
+        tabBarHeight = tabController.tabBar.frame.size.height
         
         //tabController.delegate = tabBarDelegate
         

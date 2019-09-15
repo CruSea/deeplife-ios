@@ -9,6 +9,7 @@
 import UIKit
 
 let tabBarDelegate = TabBarDelegate()
+var tabBarHeight: CGFloat = CGFloat(0)
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

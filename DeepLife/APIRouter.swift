@@ -12,6 +12,24 @@ class APIRoute {
     
     let API_BASE_URL: String = "https://deeplife.africa/api/phone/gn_api"
     
+    func toggleEventAttendance() -> String {
+        
+        return "\(API_BASE_URL)/toggle_event_attendance.php"
+        
+    }
+    
+    func getEventAttendanceURL() -> String {
+        
+        return "\(API_BASE_URL)/get_event_attendance.php"
+        
+    }
+    
+    func getEventsURL() -> String {
+        
+        return "\(API_BASE_URL)/get_user_events.php"
+        
+    }
+    
     func getGroupPostsURL() -> String {
         
         return "\(API_BASE_URL)/group_posts.php"

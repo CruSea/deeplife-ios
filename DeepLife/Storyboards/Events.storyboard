@@ -9,6 +9,14 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Events View Controller-->
         <scene sceneID="ICZ-Eu-Ecr">
@@ -17,13 +25,115 @@
                     <view key="view" contentMode="scaleToFill" id="6UH-c6-7kh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IAl-sc-JtL">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="IAl-sc-JtL" firstAttribute="leading" secondItem="DnO-7x-mnP" secondAttribute="leading" id="2C7-eC-XF0"/>
+                            <constraint firstItem="IAl-sc-JtL" firstAttribute="trailing" secondItem="DnO-7x-mnP" secondAttribute="trailing" id="4aR-uS-VBW"/>
+                            <constraint firstItem="IAl-sc-JtL" firstAttribute="top" secondItem="6UH-c6-7kh" secondAttribute="top" id="Kkf-JA-VND"/>
+                            <constraint firstItem="IAl-sc-JtL" firstAttribute="bottom" secondItem="DnO-7x-mnP" secondAttribute="bottom" id="XQj-xF-BbG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="DnO-7x-mnP"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="IAl-sc-JtL" id="zCp-1e-jr1"/>
+                        <segue destination="wAh-Dr-CIw" kind="show" identifier="EventDetailSegue" id="6K2-6L-hV6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aWD-hs-tTp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="65" y="-197"/>
+            <point key="canvasLocation" x="63.768115942028992" y="-197.28260869565219"/>
+        </scene>
+        <!--Event Detail View Controller-->
+        <scene sceneID="Xal-7n-f1T">
+            <objects>
+                <viewController id="wAh-Dr-CIw" customClass="EventDetailViewController" customModule="DeepLife" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8ZV-2K-ptA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NFU-tz-TF4">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="269"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="NFU-tz-TF4" secondAttribute="height" multiplier="200:130" id="QfV-3k-CGH"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xIN-a8-Xx3">
+                                <rect key="frame" x="25" y="299" width="119" height="26"/>
+                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uIr-5h-fya">
+                                <rect key="frame" x="25.000000000000007" y="330" width="98.666666666666686" height="17.666666666666686"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5DZ-Di-1BD">
+                                <rect key="frame" x="25" y="362.66666666666669" width="72" height="18"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chT-GX-emc">
+                                <rect key="frame" x="25" y="400.66666666666669" width="364" height="55"/>
+                                <color key="backgroundColor" red="0.12941176470588234" green="0.58823529411764708" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="wF6-5b-CAo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="15"/>
+                                <state key="normal" title="Attend Event">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="attendEventButtonDidTouch:" destination="wAh-Dr-CIw" eventType="touchUpInside" id="UBh-wx-Vmm"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vzy-yl-k23">
+                                <rect key="frame" x="25" y="480.66666666666669" width="364" height="18"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xIN-a8-Xx3" firstAttribute="leading" secondItem="6ia-9F-ceI" secondAttribute="leading" constant="25" id="4tW-Ov-D4R"/>
+                            <constraint firstItem="6ia-9F-ceI" firstAttribute="trailing" secondItem="chT-GX-emc" secondAttribute="trailing" constant="25" id="6Au-ye-Hlm"/>
+                            <constraint firstItem="5DZ-Di-1BD" firstAttribute="leading" secondItem="6ia-9F-ceI" secondAttribute="leading" constant="25" id="9OO-L8-mFU"/>
+                            <constraint firstItem="NFU-tz-TF4" firstAttribute="top" secondItem="8ZV-2K-ptA" secondAttribute="top" id="KJu-N4-yiI"/>
+                            <constraint firstItem="xIN-a8-Xx3" firstAttribute="top" secondItem="NFU-tz-TF4" secondAttribute="bottom" constant="30" id="KjH-a9-eHF"/>
+                            <constraint firstItem="uIr-5h-fya" firstAttribute="top" secondItem="xIN-a8-Xx3" secondAttribute="bottom" constant="5" id="MRn-VC-iV2"/>
+                            <constraint firstItem="NFU-tz-TF4" firstAttribute="leading" secondItem="6ia-9F-ceI" secondAttribute="leading" id="NKu-fq-gJk"/>
+                            <constraint firstItem="Vzy-yl-k23" firstAttribute="top" secondItem="chT-GX-emc" secondAttribute="bottom" constant="25" id="NaX-Fp-kEI"/>
+                            <constraint firstItem="chT-GX-emc" firstAttribute="top" secondItem="5DZ-Di-1BD" secondAttribute="bottom" constant="20" id="O6g-Ui-cH7"/>
+                            <constraint firstItem="NFU-tz-TF4" firstAttribute="trailing" secondItem="6ia-9F-ceI" secondAttribute="trailing" id="W6G-Gq-sye"/>
+                            <constraint firstItem="Vzy-yl-k23" firstAttribute="leading" secondItem="6ia-9F-ceI" secondAttribute="leading" constant="25" id="aAp-Qt-kHh"/>
+                            <constraint firstItem="chT-GX-emc" firstAttribute="leading" secondItem="6ia-9F-ceI" secondAttribute="leading" constant="25" id="jOx-Jv-9iB"/>
+                            <constraint firstItem="5DZ-Di-1BD" firstAttribute="top" secondItem="uIr-5h-fya" secondAttribute="bottom" constant="15" id="kWV-ib-Ohe"/>
+                            <constraint firstItem="uIr-5h-fya" firstAttribute="leading" secondItem="6ia-9F-ceI" secondAttribute="leading" constant="25" id="ovv-19-Tcb"/>
+                            <constraint firstItem="6ia-9F-ceI" firstAttribute="trailing" secondItem="Vzy-yl-k23" secondAttribute="trailing" constant="25" id="unf-bY-W7s"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6ia-9F-ceI"/>
+                    </view>
+                    <connections>
+                        <outlet property="attendEventButton" destination="chT-GX-emc" id="0Wl-gx-wqU"/>
+                        <outlet property="coverImageView" destination="NFU-tz-TF4" id="cW0-nh-mgn"/>
+                        <outlet property="eventDateLabel" destination="5DZ-Di-1BD" id="GzI-Ev-cG9"/>
+                        <outlet property="eventDescription" destination="Vzy-yl-k23" id="M8C-2O-0Yg"/>
+                        <outlet property="eventLocationLabel" destination="uIr-5h-fya" id="oF2-B7-LlN"/>
+                        <outlet property="eventNameLabel" destination="xIN-a8-Xx3" id="rJV-Ay-mse"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="en6-4p-eYA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="918.84057971014499" y="-197.28260869565219"/>
         </scene>
     </scenes>
 </document>

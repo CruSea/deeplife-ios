@@ -12,6 +12,12 @@ class APIRoute {
     
     let API_BASE_URL: String = "https://deeplife.africa/api/phone/gn_api"
     
+    func getProfile() -> String {
+        
+        return "\(API_BASE_URL)/get_profile.php"
+        
+    }
+    
     func toggleEventAttendance() -> String {
         
         return "\(API_BASE_URL)/toggle_event_attendance.php"

@@ -22,7 +22,7 @@ class FeedViewController: UIViewController {
     lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(FeedViewController.handleRefresh(_:)), for: UIControl.Event.valueChanged)
-        refreshControl.tintColor = UIColor.red
+        refreshControl.tintColor = UIColor.black
         return refreshControl
         
     }()
@@ -38,11 +38,15 @@ class FeedViewController: UIViewController {
         tableView.register(UINib(nibName: "FeedTextTableViewCell", bundle: nil), forCellReuseIdentifier: "FeedTextTableViewCell")
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.refreshControl = refreshControl
         tableView.tableFooterView = UIView()
-        var leftBarItemImage = UIImage(named: "camera_nav_icon")
-        leftBarItemImage = leftBarItemImage?.withRenderingMode(.alwaysOriginal)
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: leftBarItemImage, style: .plain, target: self, action: #selector(newPostButtonDidTouch))
-        title = "Feed"
+//        var leftBarItemImage = UIImage(named: "camera_nav_icon")
+//        leftBarItemImage = leftBarItemImage?.withRenderingMode(.alwaysOriginal)
+//        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: leftBarItemImage, style: .plain, target: self, action: #selector(newPostButtonDidTouch))
+        title = "Social"
+        self.navigationController?.navigationItem.largeTitleDisplayMode = .never
+        self.navigationController?.navigationItem.backBarButtonItem?.title = ""
+        self.navigationController?.navigationBar.barTintColor = Colors.themeYellow
         getPosts()
     }
     
@@ -52,6 +56,11 @@ class FeedViewController: UIViewController {
             shouldRefresh = false
             getPosts()
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        tabBarController?.removeTabbarItemsText()
     }
     
     @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
@@ -141,13 +150,13 @@ class FeedViewController: UIViewController {
         
     }
     
-    @objc func newPostButtonDidTouch() {
-        let newPostStoryboard = UIStoryboard(name: "NewPost", bundle: nil)
-        let newPostVC = newPostStoryboard.instantiateViewController(withIdentifier: "NewPost") as! NewPostViewController
-        let navController = UINavigationController(rootViewController: newPostVC)
-        self.shouldRefresh = true
-        self.present(navController, animated: true, completion: nil)
-    }
+//    @objc func newPostButtonDidTouch() {
+//        let newPostStoryboard = UIStoryboard(name: "NewPost", bundle: nil)
+//        let newPostVC = newPostStoryboard.instantiateViewController(withIdentifier: "NewPost") as! NewPostViewController
+//        let navController = UINavigationController(rootViewController: newPostVC)
+//        self.shouldRefresh = true
+//        self.present(navController, animated: true, completion: nil)
+//    }
 
 }
 

@@ -16,7 +16,13 @@ class TabBarDelegate: NSObject, UITabBarControllerDelegate {
         
         let selectedViewController = tabBarController.selectedViewController
         
-        if selectedViewController == nil || viewController == selectedViewController {
+        guard let _selectedViewController = selectedViewController else {
+            
+            return false
+            
+        }
+        
+        if viewController == _selectedViewController {
             
             return false
             
@@ -28,47 +34,30 @@ class TabBarDelegate: NSObject, UITabBarControllerDelegate {
             
         }
         
-        guard let fromView = selectedViewController?.view else {
+        if controllerIndex == 2 {
             
-            return true
+//            let newPostStoryboard = UIStoryboard(name: "NewPost", bundle: nil)
+//
+//            let newPostVC = newPostStoryboard.instantiateViewController(withIdentifier: "NewPost") as! NewPostViewController
+//
+//            let navController = UINavigationController(rootViewController: newPostVC)
+//
+//            _selectedViewController.present(navController, animated: true, completion: nil)
             
-        }
-        
-        guard let toView = viewController.view else {
+            let newPostStoryboard = UIStoryboard(name: "NewPost", bundle: nil)
+            let newPostVC = newPostStoryboard.instantiateViewController(withIdentifier: "NewPost") as! NewPostViewController
+            let navController = UINavigationController(rootViewController: newPostVC)
+            _selectedViewController.present(navController, animated: true, completion: nil)
             
-            return true
-            
-        }
-        
-        let viewSize: CGRect = fromView.frame
-        
-        let scrollRight: Bool = controllerIndex > tabBarController.selectedIndex
-        
-        fromView.superview?.addSubview(toView)
-        
-        let screenWidth: CGFloat = UIScreen.main.bounds.size.width
-        
-        toView.frame = CGRect(x: scrollRight ? screenWidth : -screenWidth, y: viewSize.origin.y, width: screenWidth, height: viewSize.size.height)
-        
-        UIView.animate(withDuration: 0.3, delay: 0, options: [.curveEaseInOut], animations: {
-            
-            fromView.frame = CGRect(x: scrollRight ? -screenWidth : screenWidth, y: viewSize.origin.y, width: screenWidth, height: viewSize.size.height)
-            
-            toView.frame = CGRect(x: 0, y: viewSize.origin.y, width: screenWidth, height: viewSize.size.height)
-            
-        }) { (success) in
-            
-            if (success) {
-                
-                fromView.removeFromSuperview()
-                
-                tabBarController.selectedIndex = controllerIndex
-                
-            }
+            return false
             
         }
         
-        return false
+        let navigationController = viewController as? UINavigationController
+        
+        _ = navigationController?.popToRootViewController(animated: false)
+        
+        return true
         
     }
     

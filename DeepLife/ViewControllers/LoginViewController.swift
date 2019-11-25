@@ -260,6 +260,15 @@ class LoginViewController: UIViewController {
         
     }
     
+    @IBAction func forgotPasswordButtonDidTouch(_ sender: Any) {
+        
+        guard let url = URL(string: "https://deeplife.africa/forgot-password") else { return }
+        
+        UIApplication.shared.open(url)
+        
+    }
+    
+    
     @IBAction func createAccountButtonDidTouch(_ sender: Any) {
         
         performSegue(withIdentifier: "createaccountsegue", sender: nil)

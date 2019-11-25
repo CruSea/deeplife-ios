@@ -415,11 +415,11 @@ class HomeViewController: UIViewController {
     }
     
     
-    @IBAction func addDiscipleButtonDidTouch(_ sender: Any) {
-        
-        performSegue(withIdentifier: "addDisciplesSegue", sender: nil)
-        
-    }
+//    @IBAction func addDiscipleButtonDidTouch(_ sender: Any) {
+//
+//        performSegue(withIdentifier: "addDisciplesSegue", sender: nil)
+//
+//    }
     
     @IBAction func disciplesButtonDidTouch(_ sender: Any) {
         

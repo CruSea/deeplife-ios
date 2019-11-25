@@ -198,7 +198,7 @@ class Auth {
 //
 //        }
         
-        let tabController = getSocialWindowRoot()
+        let tabController = getDashboardWindowRoot()
         
         return tabController
         
@@ -289,6 +289,10 @@ class Auth {
         
         let tabController = UITabBarController()
         
+        tabController.delegate = tabBarDelegate
+        
+        let feedStoryboard = UIStoryboard(name: "Feed", bundle: nil)
+        
         let homeStoryboard = UIStoryboard(name: "Home", bundle: nil)
         
         let tasksStoryboard = UIStoryboard(name: "Tasks", bundle: nil)
@@ -296,6 +300,8 @@ class Auth {
         let exposureStoryboard = UIStoryboard(name: "Exposure", bundle: nil)
         
         let treeStoryboard = UIStoryboard(name: "Tree", bundle: nil)
+        
+        let feedVC = feedStoryboard.instantiateViewController(withIdentifier: "feedVC") as! FeedViewController
         
         let homeVC = homeStoryboard.instantiateViewController(withIdentifier: "homeVC") as! HomeViewController
         
@@ -305,25 +311,43 @@ class Auth {
         
         let treeVC = treeStoryboard.instantiateViewController(withIdentifier: "treeVC") as! TreeViewController
         
-        
         let vcData: [(UIViewController, UIImage, String)] = [
             (homeVC, UIImage(named: "home_icon")!, "home"),
-            (tasksVC, UIImage(named: "tasks_icon")!, "tasks"),
+            (feedVC, UIImage(named: "social_icon")!, "feed"),
+            (tasksVC, UIImage(named: "camera_icon")!, "tasks"),
             (exposureVC, UIImage(named: "exposure_icon")!, "exposure"),
             (treeVC, UIImage(named: "tree_icon")!, "tree")
         ]
         
-        UINavigationBar.appearance().tintColor = UIColor.black
+//        UINavigationBar.appearance().tintColor = UIColor(hexString: "#FFC324")
+//        UINavigationBar.appearance().backgroundColor = Colors.themeYellow!
+        
+        if #available(iOS 13.0, *) {
+            let appearance = UINavigationBarAppearance()
+            appearance.backgroundColor = Colors.themeYellow
+            appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+            appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+            UINavigationBar.appearance().tintColor = .white
+            UINavigationBar.appearance().standardAppearance = appearance
+            UINavigationBar.appearance().compactAppearance = appearance
+            UINavigationBar.appearance().scrollEdgeAppearance = appearance
+        } else {
+            UINavigationBar.appearance().tintColor = .white
+            UINavigationBar.appearance().barTintColor = Colors.themeYellow
+            UINavigationBar.appearance().isTranslucent = false
+        }
         
         UINavigationBar.appearance().largeTitleTextAttributes =
-            [NSAttributedString.Key.foregroundColor:UIColor.black,
+            [NSAttributedString.Key.foregroundColor:UIColor.white,
              NSAttributedString.Key.font: UIFont(name: "Roboto-Bold", size: 30)!]
         
         let vcs = vcData.map { (vc, image, title) -> UIViewController in
             
-            if title == "tasks" || title == "exposure" || title == "tree" {
+            if title == "tasks" || title == "exposure" || title == "tree" || title == "feed" {
                 
                 let nav = UINavigationController(rootViewController: vc)
+                
+                nav.navigationBar.barTintColor = Colors.themeYellow
                 
                 nav.tabBarItem.image = image
                 

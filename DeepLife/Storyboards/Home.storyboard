@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3JP-V2-Bys">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3JP-V2-Bys">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -143,12 +141,12 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aEk-wv-aCL">
                                                         <rect key="frame" x="26" y="241" width="323" height="50"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="DEx-kl-wIP"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="16"/>
-                                                        <state key="normal" title="Disciples">
+                                                        <state key="normal" title="My Disciples">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
@@ -265,24 +263,11 @@
                                     <constraint firstItem="ty9-PV-f67" firstAttribute="top" secondItem="3RP-u4-Cx6" secondAttribute="top" id="xsl-Cs-f4N"/>
                                 </constraints>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tXI-Kh-aRz">
-                                <rect key="frame" x="304" y="679" width="60" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="XKi-na-a3j"/>
-                                    <constraint firstAttribute="width" constant="60" id="ZIr-dm-NLP"/>
-                                </constraints>
-                                <state key="normal" image="add_button"/>
-                                <connections>
-                                    <action selector="addDiscipleButtonDidTouch:" destination="3JP-V2-Bys" eventType="touchUpInside" id="Flh-b8-jPp"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="oha-FP-fdJ" firstAttribute="bottom" secondItem="tXI-Kh-aRz" secondAttribute="bottom" constant="11" id="0rJ-hE-RGy"/>
                             <constraint firstItem="3RP-u4-Cx6" firstAttribute="top" secondItem="l3a-0L-Ffd" secondAttribute="top" id="7eE-RI-W5o"/>
                             <constraint firstItem="3RP-u4-Cx6" firstAttribute="bottom" secondItem="oha-FP-fdJ" secondAttribute="bottom" id="BzB-hK-eUf"/>
-                            <constraint firstItem="oha-FP-fdJ" firstAttribute="trailing" secondItem="tXI-Kh-aRz" secondAttribute="trailing" constant="11" id="G0C-Zv-9iE"/>
                             <constraint firstItem="3RP-u4-Cx6" firstAttribute="trailing" secondItem="oha-FP-fdJ" secondAttribute="trailing" id="Wi5-Jg-KcT"/>
                             <constraint firstItem="3RP-u4-Cx6" firstAttribute="leading" secondItem="oha-FP-fdJ" secondAttribute="leading" id="cL8-Q4-dzu"/>
                         </constraints>
@@ -301,24 +286,23 @@
                         <outlet property="primaryDisciplesCountLabel" destination="edX-V4-TDQ" id="koy-lQ-M7k"/>
                         <outlet property="profileImageView" destination="yM8-zB-LQJ" id="75l-s8-Oj1"/>
                         <outlet property="settingsButton" destination="Ffd-eN-RwC" id="Rrq-f4-TyQ"/>
-                        <segue destination="Ix6-VT-qX1" kind="presentation" identifier="addDisciplesSegue" id="daA-ad-X29"/>
                         <segue destination="IES-Pj-KOa" kind="presentation" identifier="disciplesViewTapSegue" id="m4J-RE-GO5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iwJ-Lw-KyT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1104.8" y="123.23838080959521"/>
+            <point key="canvasLocation" x="-116" y="187"/>
         </scene>
         <!--Disciples View Controller-->
         <scene sceneID="T0v-q4-zew">
             <objects>
                 <viewController id="syh-Et-BLK" customClass="DisciplesViewController" customModule="DeepLife" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4Pa-F2-Ze6">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="591"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RpB-Ir-Lgw">
-                                <rect key="frame" x="0.0" y="120" width="375" height="483"/>
+                                <rect key="frame" x="0.0" y="120" width="375" height="471"/>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k4q-jw-nul">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
@@ -337,11 +321,23 @@
                                             <constraint firstAttribute="height" constant="60" id="4oy-AB-A2r"/>
                                         </constraints>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XMu-U7-e0k">
+                                        <rect key="frame" x="15" y="26" width="123" height="30"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
+                                        <state key="normal" title="Add New Disciple">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addNewDiscipleButtonDidTouch:" destination="syh-Et-BLK" eventType="touchUpInside" id="rq7-cX-uGW"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="J04-gN-zmD" firstAttribute="top" secondItem="k4q-jw-nul" secondAttribute="top" constant="30" id="4Y2-lP-Pua"/>
+                                    <constraint firstItem="XMu-U7-e0k" firstAttribute="centerY" secondItem="J04-gN-zmD" secondAttribute="centerY" id="4ac-33-RtT"/>
                                     <constraint firstAttribute="bottom" secondItem="t2F-R5-X2q" secondAttribute="bottom" id="81w-zg-cI4"/>
+                                    <constraint firstItem="XMu-U7-e0k" firstAttribute="leading" secondItem="k4q-jw-nul" secondAttribute="leading" constant="15" id="GOI-a7-jyw"/>
                                     <constraint firstAttribute="height" constant="120" id="MbX-yC-gJx"/>
                                     <constraint firstItem="t2F-R5-X2q" firstAttribute="leading" secondItem="k4q-jw-nul" secondAttribute="leading" id="TxW-Ts-AV9"/>
                                     <constraint firstAttribute="trailing" secondItem="J04-gN-zmD" secondAttribute="trailing" constant="20" id="UbV-fl-p0X"/>
@@ -366,18 +362,19 @@
                         <outlet property="scrollView" destination="RpB-Ir-Lgw" id="Rkb-Gj-3GQ"/>
                         <outlet property="segmentedControl" destination="t2F-R5-X2q" id="to5-c1-7cc"/>
                         <segue destination="MgL-zd-lWZ" kind="show" identifier="disciplesProfileSegue" id="Z1f-jY-Rsj"/>
+                        <segue destination="Ix6-VT-qX1" kind="presentation" identifier="addDisciplesSegue" id="463-PP-txo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wab-ac-gSI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2828" y="-405.24737631184411"/>
+            <point key="canvasLocation" x="2775" y="-405"/>
         </scene>
         <!--Disciple Profile View Controller-->
         <scene sceneID="R9u-9I-ji9">
             <objects>
                 <viewController id="MgL-zd-lWZ" customClass="DiscipleProfileViewController" customModule="DeepLife" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0ks-de-QLq">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="591"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kYS-Kq-n7W">
@@ -474,7 +471,7 @@
                                 </constraints>
                             </stackView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="JqB-6q-ab8">
-                                <rect key="frame" x="20" y="285" width="335" height="29"/>
+                                <rect key="frame" x="20" y="285" width="335" height="32"/>
                                 <segments>
                                     <segment title="Win"/>
                                     <segment title="Build"/>
@@ -486,7 +483,7 @@
                                 </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MaL-eN-GIC">
-                                <rect key="frame" x="293" y="521" width="60" height="60"/>
+                                <rect key="frame" x="293" y="509" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="LUY-E2-nIZ"/>
                                     <constraint firstAttribute="height" constant="60" id="yoj-20-idO"/>
@@ -534,14 +531,14 @@
             <objects>
                 <viewController id="Ix6-VT-qX1" customClass="NewDiscipleViewController" customModule="DeepLife" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3SF-8S-oNx">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1220"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2pW-ah-nbp">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="116"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="740" text="New Disciple" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Xt-mu-Qws">
-                                        <rect key="frame" x="16" y="70.5" width="186.5" height="37.5"/>
+                                        <rect key="frame" x="16" y="70.5" width="187" height="37.5"/>
                                         <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="32"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -565,7 +562,7 @@
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZJu-Z1-Qcg">
-                                <rect key="frame" x="0.0" y="116" width="375" height="1104"/>
+                                <rect key="frame" x="0.0" y="116" width="375" height="1084"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m8i-7d-gkr">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1104"/>
@@ -593,7 +590,6 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="XK7-xK-njN"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits" textContentType="name"/>
                                             </textField>
@@ -608,7 +604,6 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="PVL-Ae-xbx"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" textContentType="name"/>
                                             </textField>
@@ -623,7 +618,6 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="Unk-yd-JDN"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" spellCheckingType="no" textContentType="tel"/>
                                             </textField>
@@ -654,7 +648,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4zD-QQ-Tlv">
-                                                <rect key="frame" x="26" y="469" width="38" height="18"/>
+                                                <rect key="frame" x="26" y="469" width="37" height="18"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="15"/>
                                                 <color key="textColor" red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -664,7 +658,6 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="JFN-GC-Aq5"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                                             </textField>
@@ -795,7 +788,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IES-Pj-KOa" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="buk-dU-nbd">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
@@ -820,6 +813,6 @@
         <image name="settings_icon" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="daA-ad-X29"/>
+        <segue reference="463-PP-txo"/>
     </inferredMetricsTieBreakers>
 </document>

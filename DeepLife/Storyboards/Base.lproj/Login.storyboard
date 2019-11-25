@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.59" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.45"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -118,16 +116,28 @@
                                                     <action selector="createAccountButtonDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KyO-zb-SPI"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6c3-VZ-vIN">
+                                                <rect key="frame" x="135" y="529" width="144" height="29"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="14"/>
+                                                <state key="normal" title="Forgot your password?">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="forgotPasswordButtonDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lq0-hI-HWz"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="wl6-bi-FoW" firstAttribute="leading" secondItem="6uU-nc-qj4" secondAttribute="leading" constant="45" id="BFx-xZ-qFd"/>
                                             <constraint firstAttribute="trailing" secondItem="wl6-bi-FoW" secondAttribute="trailing" constant="45" id="IoT-Re-YBh"/>
                                             <constraint firstItem="wl6-bi-FoW" firstAttribute="centerY" secondItem="6uU-nc-qj4" secondAttribute="centerY" constant="-50" id="bTr-3e-S1a"/>
+                                            <constraint firstItem="6c3-VZ-vIN" firstAttribute="centerX" secondItem="6uU-nc-qj4" secondAttribute="centerX" id="euK-NU-XQP"/>
                                             <constraint firstItem="bf6-mp-UZf" firstAttribute="top" secondItem="wl6-bi-FoW" secondAttribute="bottom" constant="60" id="gpt-SB-qvY"/>
                                             <constraint firstItem="bf6-mp-UZf" firstAttribute="leading" secondItem="6uU-nc-qj4" secondAttribute="leading" id="q7I-4K-P8U"/>
                                             <constraint firstAttribute="trailing" secondItem="bf6-mp-UZf" secondAttribute="trailing" id="v3o-iP-oaB"/>
                                             <constraint firstAttribute="height" constant="862" id="wGL-fv-ycJ"/>
+                                            <constraint firstItem="6c3-VZ-vIN" firstAttribute="top" secondItem="wl6-bi-FoW" secondAttribute="bottom" constant="15" id="yXO-SR-qzf"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -176,14 +186,14 @@
             <objects>
                 <viewController id="cwe-in-Kzb" customClass="SignupViewController" customModule="DeepLife" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4Gj-qH-Byx">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1180"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="signup_background" translatesAutoresizingMaskIntoConstraints="NO" id="Rkc-Do-LnE">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="1180"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Ks-9r-WkU">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="1180"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QOJ-OU-cne">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
@@ -284,8 +294,8 @@
                                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWo-wI-kQF">
-                                                        <rect key="frame" x="0.0" y="198" width="103" height="19"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Email Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWo-wI-kQF">
+                                                        <rect key="frame" x="0.0" y="198" width="136" height="19"/>
                                                         <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="16"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -453,7 +463,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ebG-ao-Oxh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="973.91304347826099" y="132.58928571428572"/>
+            <point key="canvasLocation" x="972.79999999999995" y="132.23388305847078"/>
         </scene>
     </scenes>
     <resources>

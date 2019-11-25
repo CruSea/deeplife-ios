@@ -360,6 +360,11 @@ class DisciplesViewController: UIViewController, UIScrollViewDelegate {
         }
         
     }
+    @IBAction func addNewDiscipleButtonDidTouch(_ sender: Any) {
+        
+        performSegue(withIdentifier: "addDisciplesSegue", sender: nil)
+        
+    }
     
     @IBAction func cancelButtonDidTouch(_ sender: Any) {
         
